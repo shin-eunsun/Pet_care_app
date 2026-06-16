@@ -2,55 +2,50 @@ name: pet_care_app
 description: "A Pet Care Application"
 
 publish_to: 'none'
-
 version: 1.0.0+1
 
 environment:
-  sdk: '>=3.0.0 <4.0.0'
+  sdk: '>=3.3.0 <4.0.0'
 
 dependencies:
   flutter:
     sdk: flutter
 
-  # 파이어베이스 관련
-  firebase_core: ^2.24.2
-  firebase_auth: ^4.16.0
-  cloud_firestore: ^4.14.0
-  firebase_storage: ^11.6.0
+  # ★ 필수 패키지 (버전 최신화)
+  firebase_core: ^3.1.1
+  firebase_auth: ^5.1.2
+  cloud_firestore: ^5.0.0
+  firebase_storage: ^12.1.1
+  image_picker: ^1.1.2
 
   # 상태 관리 및 UI
-  provider: ^6.1.1
-  cupertino_icons: ^1.0.2
-  google_fonts: ^6.1.0
+  provider: ^6.1.2
+  cupertino_icons: ^1.0.6
+  google_fonts: ^6.2.1
 
   # 이미지 처리
   cached_network_image: ^3.3.1
 
-  # 유틸리티 (지도 연동 및 주소 검색)
-  intl: ^0.18.1
-  shared_preferences: ^2.5.5
-  url_launcher: ^6.3.2
+  # 유틸리티
+  intl: ^0.19.0
+  shared_preferences: ^2.2.3
+  url_launcher: ^6.3.0
 
-  # ★ 주소 검색 패키지 (any보다는 최신 버전을 명시하는 것이 안정적입니다)
+  # 주소 검색 및 기타
   kpostal: ^1.1.0
-  http: ^1.6.0
-  file_picker: ^11.0.2
-  webview_flutter: ^4.14.0
+  http: ^1.2.1
+  file_picker: ^8.0.4
+  webview_flutter: ^4.7.0
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
-  flutter_lints: ^2.0.0
+  flutter_lints: ^3.0.1
 
 flutter:
   uses-material-design: true
-
   assets:
     - assets/images/
     - assets/images/products/
     - assets/images/banners/
     - assets/images/community/
-
-# ★ 빌드 오류(Namespace) 해결을 위한 강제 버전 고정
-dependency_overrides:
-  flutter_inappwebview: ^6.1.5
